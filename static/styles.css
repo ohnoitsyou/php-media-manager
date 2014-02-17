@@ -1,0 +1,26 @@
+.wrapper {
+  border: 1px solid black;
+}
+.center {
+  text-align: center;
+}
+.title {
+  padding-bottom: 20px;
+}
+.mainMenu {
+  list-style: disc inside;
+}
+.inventory {
+  width: 100%;
+  border: 1px solid black;
+}
+.inventory tr th {
+  text-align: center;
+  border: 1px solid black;
+}
+.inventory tr td {
+  border: 1px solid black;
+}
+form label {
+  padding-right: 5px;
+}

@@ -1,0 +1,53 @@
+<!--
+For CD/DVD's the Software tracks the following
+  Disc Type
+  Disc Title
+  Disc Description
+  Audio Track Information
+
+For our purposes we obviously don't need to track the Audio track info
+
+-->
+<html>
+  <head>
+    <title>{{title}}</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css"></link>
+    <link rel="stylesheet" type="text/css" href="/960_12_col.css"></link>
+    <link rel="stylesheet" type="text/css" href="/reset.css"></link>
+  </head>
+  <body>
+  <div class="container_12">
+    <div class="grid_12">
+      <h1 class="center title">CSEE Media Manager</h1>
+    </div>
+  </div>
+  <div class="wrapper container_12">
+    <div class="grid_2">
+      {{> mainMenu }}
+    </div>
+    <div class="grid_8">
+      <div class="title center">New Item</div>
+      <div>
+        <form action="/new/item" method="post">
+          <table>
+            <tr>
+              <td><label for="iType">Item Type</label></td>
+              <td><select name="iType">{{> itemTypes}}</select></td>
+            </tr>
+            <tr>
+              <td><label for="iTitle">Item Title</label</td>
+              <td><input type="text" size="32" name="iTitle"></td>
+            </tr>
+            <tr>
+              <td><label for="iDescription">Item Description</label></td>
+              <td><input type="text" size="32" name="iDescription"></td>
+            </tr>
+            <tr>
+              <td colspan="2"><input type="submit" value="Submit" /></td>
+            </tr>
+          </table>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

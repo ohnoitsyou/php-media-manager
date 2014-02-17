@@ -1,0 +1,57 @@
+<!--
+Need to track the following:
+  Renter name
+  Renter room
+  Renter ID
+  Renter studentID
+  Renter phone
+
+The Software tracks the following:
+  Name
+  Phone
+  Address
+-->
+<html>
+  <head>
+    <title>{{title}}</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css"></link>
+    <link rel="stylesheet" type="text/css" href="/960_12_col.css"></link>
+    <link rel="stylesheet" type="text/css" href="/reset.css"></link>
+  </head>
+  <body>
+  <div class="container_12">
+    <div class="grid_12">
+      <h1 class="center title">CSEE Media Manager</h1>
+    </div>
+  </div>
+  <div class="wrapper container_12">
+    <div class="grid_2">
+      {{> mainMenu }}
+    </div>
+    <div class="grid_8">
+      <div class="title center">New Borrower</div>
+      <div>
+        <form action="/newBorrower" method="post">
+          <table>
+            <tr>
+              <td><label for="bName">Name</label></td>
+              <td><input type="text" size="24"></td>
+            </tr>
+            <tr>
+              <td><label for="bStudentID">Student ID</label></td>
+              <td><input type="text" size="15" maxlength="7"></td>
+            </tr>
+            <tr>
+              <td><label for="bPhone">Phone Number</label></td>
+              <td><input type="text" size="15" maxlength="10"></td>
+            </tr>
+            <tr>
+              <td><label for="bRoom">Room Number</label></td>
+              <td><input type="text" size="24"></td>
+            </tr>
+          </table>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
