@@ -1,19 +1,7 @@
 <?php
-require 'Handlebars/src/Handlebars/Autoloader.php';
-Handlebars\Autoloader::register();
 
-use Handlebars\Handlebars;
-
-$engine = new Handlebars(array(
-    'loader' => new \Handlebars\Loader\FilesystemLoader(__DIR__.'/views/'),
-    'partials_loader' => new \Handlebars\Loader\FilesystemLoader(
-        __DIR__ . '/views/partials/'/*,
-        array(
-            'prefix' => '_' 
-        )
-       */
-    )
-));
+require 'vendor/autoload.php';
+require 'includes.php';
 
 $requestURI = explode('/', $_SERVER['REQUEST_URI']);
 $scriptName = explode('/',$_SERVER['SCRIPT_NAME']);
